@@ -1,0 +1,150 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 600px;
+    padding: 25px;
+    background: #c7e0cd;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  div {
+    margin-bottom: 18px;
+  }
+  
+  /* Input, Select, and Textarea Styling */
+  input, select, textarea {
+    width: 80%;
+    padding: 9px;
+    margin-top: 6px;
+    border: 2px solid #f0f0f0;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fdf4f4;
+    transition: all 0.3s ease;
+    color: #333;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #ff4081; /* Bright pink border */
+    background-color: #ffe4e9;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+    outline: none;
+  }
+  
+  label {
+    font-size: 15px;
+    font-weight:700;
+    color:darkgreen;
+    margin-bottom: 6px;
+    display: block;
+    font-family:'Arial Narrow Bold', sans-serif;
+  }
+  
+  div .error-message {
+    color: #f44336;
+    font-size: 12px;
+    visibility: hidden;
+    margin-top: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  div input.ng-invalid.ng-touched,
+  div select.ng-invalid.ng-touched {
+    border-color: #f44336;
+  }
+  
+  div input.ng-invalid.ng-touched + .error-message,
+  div select.ng-invalid.ng-touched + .error-message {
+    visibility: visible;
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  button {
+    background-color: #4caf50;
+    
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 12px;
+  }
+  
+  button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #388e3c; 
+    transform: translateY(-4px);
+  }
+  
+  button:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  
+  
+  input[type="text"], input[type="number"], select {
+    padding-left: 35px; 
+    position: relative;
+  }
+  
+  input[type="text"]::before,
+  input[type="number"]::before,
+  select::before {
+    content: "\f007"; 
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff4081; 
+    font-size: 18px;
+  }
+  
+  
+  input:focus::before,
+  select:focus::before {
+    color: #4caf50; 
+    transition: color 0.3s ease;
+  }
+  
+ 
+  @media (max-width: 600px) {
+    form {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    button {
+      padding: 12px;
+      font-size: 15px;
+    }
+  }
+  

@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+  
+    padding: 0;
+  }
+  
+  /* Loading State */
+  .loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #4CAF50;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Error Message */
+  .error {
+    background-color: #ffcccc;
+    color: #ff3333;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ff3333;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    animation: fadeInError 1s ease-in-out;
+  }
+  
+  @keyframes fadeInError {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Table and Content */
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+  }
+
+  table {
+    width: 1100px;
+    margin-top: 30%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    width: 200px;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover td {
+    background-color: #f1f1f1;
+  }
+  
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .no-wallets {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+  }
+ 
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  }
+  /* Buttons styling */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+  }
+  
+  .update-button {
+    background-color: #4CAF50; /* Green for Update */
+    color: white;
+  }
+  
+  .update-button:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-button {
+    background-color: #f44336; /* Red for Delete */
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #e53935;
+  }
+  
+ 

@@ -1,0 +1,6 @@
+<app-home></app-home>
+<form [formGroup]="continentForm" (ngSubmit)="onSubmit()">
+    <label for="name">Continent Name:</label>
+    <input id="name" formControlName="name" required>
+    <button type="submit" [disabled]="!continentForm.valid">Create Continent</button>
+</form>

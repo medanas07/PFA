@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: ${db_url:jdbc:postgresql://localhost:5432/postgres}
+    username: postgres
+    password: houda
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: houdajouba3@gmail.com
+    password: herk efmz ohwr vneq
+    properties:
+      mail:
+        smtp:
+          auth=true:
+          starttls:
+            enable=true:
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  port: 8081
+
+keycloak:
+  auth-server-url: http://localhost:8180
+  realm: bna
+  resource: bna-client
+  public-client: true
+  confidential-port=0:
+
+

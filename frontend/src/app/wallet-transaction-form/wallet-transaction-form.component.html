@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<app-home></app-home>
+<div>
+    <h2>Transactions de portefeuille</h2>
+
+    <!-- Formulaire pour créer une nouvelle transaction -->
+    <form (ngSubmit)="createTransaction()">
+      <div>
+        <label>Montant:</label>
+        <input type="number" [(ngModel)]="newTransaction.amount" name="amount" required />
+      </div>
+      <div>
+        <label>Type:</label>
+        <select [(ngModel)]="newTransaction.type" name="type" required>
+            <option [value]="WalletTransactionType.DEPOSIT">Dépôt</option>
+            <option [value]="WalletTransactionType.WITHDRAWAL">Retrait</option>
+            <option [value]="WalletTransactionType.TRANSFER">Transfert</option>
+        </select>
+      </div>
+
+      <button type="submit">Créer une transaction</button>
+    </form>

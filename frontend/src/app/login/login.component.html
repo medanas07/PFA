@@ -1,0 +1,59 @@
+    
+<div class="login-container">
+  <div class="left-section">
+    <h1 >Welcome to...</h1>
+    <div class="company-logo"><img src="/assets/logo.png" width="300px" height="150ox" ></div>
+    <p  class="pp">
+      Experience a new level of banking with BNA Bank.<br> We offer personalized solutions to help you achieve your financial goals, from savings accounts to tailored loan options. <br>Trust us to keep your financial future secure and your banking experience smooth and hassle-free.
+    </p>
+  </div>
+  <div class="right-section">
+    <h2>Sign in</h2>
+    <p>
+      Sign in to access your account and manage your banking services securely.
+    </p>
+    <form>
+      <div class="form-group">
+        <label for="username">User Name</label>
+        <input
+          type="text"
+          id="username"
+          class="form-control"
+          placeholder="User Name"
+          [(ngModel)]="userName"
+          name="userName"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          placeholder="Password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+      </div>
+      <div class="form-group remember-me">
+        <input
+          type="checkbox"
+          id="rememberMe"
+          [(ngModel)]="rememberMe"
+          name="rememberMe"
+        />
+        <label for="rememberMe">Remember me</label>
+      </div>
+      <button type="submit" class="login-button" (click)="login()"  routerLink="/home">SIGN IN</button>
+    </form>
+    <div class="extra-links">
+      <a [routerLink]="['/signup']" [routerLinkActive]="['is-active']">New User? Signup</a>
+      
+      <a routerLink="/forgot-password">Forgot your password?</a>
+    </div>
+  </div>
+</div>     
+
+

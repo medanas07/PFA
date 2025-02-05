@@ -1,0 +1,57 @@
+<app-home></app-home>
+<form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Pays :</label>
+      <input type="text" formControlName="countryName">
+      
+      
+    </div>
+  
+    <div>
+      <label>ISO Code :</label>
+      <input type="text" formControlName="isoCode">
+      <div *ngIf="countryForm.get('isoCode')?.invalid && countryForm.get('isoCode')?.touched">
+        L'ISO Code doit contenir 2 à 3 caractères.
+      </div>
+    </div>
+  
+    <div>
+      <label>M49 Code :</label>
+      <input type="number" formControlName="m49Code">
+      <div *ngIf="countryForm.get('m49Code')?.invalid && countryForm.get('m49Code')?.touched">
+        Ce champ doit être un nombre valide.
+      </div>
+    </div>
+  
+    <div>
+      <label>Longitude :</label>
+      <input type="number" step="0.0001" formControlName="longitude">
+    </div>
+  
+    <div>
+      <label>Latitude :</label>
+      <input type="number" step="0.0001" formControlName="latitude">
+    </div>
+  
+    <div>
+      <label>Altitude :</label>
+      <input type="number" step="0.0001" formControlName="altitude">
+    </div>
+  
+    <div>
+      <label>Devise :</label>
+      <select formControlName="currency">
+        <option *ngFor="let currency of currencies" [value]="currency.id">{{ currency.name }}</option>
+      </select>
+    </div>
+  
+    <div>
+      <label>Continent :</label>
+      <select formControlName="continent">
+        <option *ngFor="let continent of continents" [value]="continent.id">{{ continent.name }}</option>
+      </select>
+    </div>
+  
+    <button type="submit" [disabled]="countryForm.invalid">Enregistrer</button>
+  </form>
+  

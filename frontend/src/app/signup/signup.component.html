@@ -1,0 +1,67 @@
+<div class="signup-container">
+  <div class="signup-box">
+    <h2 class="title">Create Your Account</h2>
+    <p class="description">Please fill in the details to open your bank account.</p>
+    
+    <!-- Formulaire Angular avec ngForm -->
+    <form #signupForm="ngForm" (ngSubmit)="signup()" >
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Enter your email"
+          class="form-control"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          placeholder="Create a username"
+          class="form-control"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Enter a secure password"
+          class="form-control"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          placeholder="Confirm your password"
+          class="form-control"
+          required
+        />
+      </div>
+      
+      <button type="submit" class="signup-button">Sign Up</button>
+    </form>
+    
+    <p class="footer-text">
+      Already have an account? <a href="/login">Sign In</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<app-home></app-home>
+<form (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="currency.name" name="name" required>
+  
+    <label for="code">Code:</label>
+    <input id="code" [(ngModel)]="currency.code" name="code" required>
+  
+    <label for="symbol">Symbol:</label>
+    <input id="symbol" [(ngModel)]="currency.symbol" name="symbol" required>
+  
+    <label for="price">Price:</label>
+    <input id="price" [(ngModel)]="currency.price" name="price" type="number" required>
+  
+    <button type="submit">Create Currency</button>
+  </form>

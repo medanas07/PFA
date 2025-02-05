@@ -1,0 +1,7 @@
+<app-home></app-home>
+<div *ngFor="let currency of currencies">
+    <h3>{{ currency.name }} ({{ currency.symbol }})</h3>
+    <p>Code: {{ currency.code }}</p>
+    <p>Price: {{ currency.price }}</p>
+    <button (click)="deleteCurrency(currency.id)">Delete</button>
+  </div>

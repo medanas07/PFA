@@ -1,0 +1,42 @@
+<app-home></app-home>
+<div *ngIf="loading" class="loading">
+    <p>Loading wallets...</p>
+  </div>
+  
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+  
+  <div *ngIf="!loading && wallets.length > 0">
+    <h2>All Wallets</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User ID</th>
+          <th>Balance</th>
+          <th>Created At</th>
+          <th>Actions</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let wallet of wallets">
+        <td>{{wallet.id}}</td>
+          <td>{{ wallet.userId }}</td>
+          <td>{{ wallet.balance }}</td>
+          <td>{{ wallet.createdAt | date: 'yyyy-MM-dd' }}</td>
+          <td>
+            <!-- Update Button -->
+            <button class="update-button" (click)="updateWallet(wallet)">Update</button>
+            <!-- Delete Button -->
+            <button class="delete-button" (click)="deleteWallet(wallet)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="!loading && wallets.length === 0">
+    <p>No wallets available.</p>
+  </div>
+  

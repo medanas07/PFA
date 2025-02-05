@@ -1,0 +1,87 @@
+
+form {
+    max-width: 500px;
+    margin-top: 220px;
+    padding: 90px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f5f7fa, #ace8cf);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  label i {
+    margin-right: 10px;
+    color: #ff5c8d;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  div[ngIf] {
+    display: flex;
+    align-items: center;
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  
+  div[ngIf] i {
+    margin-right: 8px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #a0c7a9, #025a0b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  0.3s ease, transform 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+  }
+  
+  button[type="submit"]:disabled {
+    background: linear-gradient(135deg, #ccc, #999);
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+  }
+  
+  input:hover {
+    border-color: #007bff;
+  }
